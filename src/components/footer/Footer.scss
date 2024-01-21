@@ -1,0 +1,42 @@
+@use "../../styles/theme";
+
+.footer {
+  border-top: 1px solid theme.$lightGrey;
+  padding: 32px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 880px) {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+}
+
+.footer__left__copyright {
+  font-weight: bold;
+
+  @media (max-width: 880px) {
+    padding-top: 16px;
+  }
+}
+
+.footer__right {
+  display: flex;
+  gap: 24px;
+
+  @media (max-width: 880px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+
+  &__link {
+    font-weight: bold;
+
+    &:hover {
+      color: theme.$darkGrey;
+    }
+  }
+}

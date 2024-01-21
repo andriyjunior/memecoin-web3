@@ -1,0 +1,61 @@
+@use "../../styles/theme";
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80vh;
+  gap: 130px;
+
+  @media (max-width: 880px) {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.home__left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @media (max-width: 880px) {
+    align-items: center;
+  }
+
+  &__title {
+    color: theme.$primary;
+    font-size: 64px;
+
+    @media (max-width: 880px) {
+      padding-top: 84px;
+      font-size: 48px;
+    }
+  }
+
+  &__description {
+    padding-top: 32px;
+    font-size: 16px;
+    max-width: 578px;
+
+    @media (max-width: 880px) {
+      width: 100%;
+    }
+  }
+
+  &__button {
+    padding-top: 24px;
+  }
+}
+
+.home__right {
+  flex-shrink: 1;
+  width: 460px;
+
+  &__image {
+    width: 100%;
+  }
+
+  @media (max-width: 880px) {
+    max-width: 260px;
+  }
+}

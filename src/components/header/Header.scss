@@ -1,0 +1,111 @@
+@use "../../styles/theme";
+
+.header {
+  padding: 8px 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    width: 80px;
+    margin-right: 12px;
+  }
+
+  &__text {
+    font-size: 24px;
+    color: theme.$primary;
+  }
+}
+
+.header__links {
+  display: flex;
+  gap: 42px;
+
+  a {
+    font-weight: bold;
+
+    &:hover {
+      color: theme.$darkGrey;
+    }
+  }
+
+  @media (max-width: 880px) {
+    display: none;
+  }
+}
+
+.header__button {
+  @media (max-width: 880px) {
+    display: none;
+  }
+}
+
+.header__humburger {
+  width: 52px;
+  height: 20px;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__line {
+    position: relative;
+    content: "";
+    background-color: theme.$primary;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
+  }
+
+  @media (max-width: 880px) {
+    display: flex;
+  }
+}
+
+.header__account {
+  font-weight: bold;
+  color: theme.$primary;
+}
+
+.menu {
+  padding: 32px 0;
+  position: fixed;
+  top: 84px;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  background-color: rgba($color: theme.$white, $alpha: 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+
+  @media (max-width: 880px) {
+    display: block;
+  }
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  a {
+    font-size: 24px;
+    color: theme.$darkGrey;
+    font-weight: bold;
+  }
+}
+
+.menu__button {
+  padding-top: 44px;
+}
