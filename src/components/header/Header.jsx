@@ -29,7 +29,7 @@ const links = [
 export const Header = () => {
   const [opened, setOpened] = useState(false);
 
-  const { account, connect } = useMetamaskConnection();
+  const { account, connect, disconnect } = useMetamaskConnection();
 
   const handleTrigger = () => setOpened((st) => !st);
   const handleOpen = () => setOpened(true);
@@ -37,6 +37,10 @@ export const Header = () => {
 
   const handleConnectionToMetamask = () => {
     connect();
+  };
+
+  const handleDisconnectionToMetamask = () => {
+    disconnect();
   };
 
   return (
@@ -83,8 +87,17 @@ export const Header = () => {
               </a>
             ))}
             <div className="menu__button">
-              <Button>Connect to metamask</Button>
+              {account ? (
+                <p className="header__account_mobile">
+                  {shortenAddress(account)}
+                </p>
+              ) : (
+                <Button onClick={handleConnectionToMetamask}>
+                  Connect to metamask
+                </Button>
+              )}
             </div>
+            <Button onClick={handleDisconnectionToMetamask}>Disconnect</Button>
           </div>
         </motion.div>
       )}

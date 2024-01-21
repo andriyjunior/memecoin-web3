@@ -72,8 +72,23 @@
 }
 
 .header__account {
+  display: block;
   font-weight: bold;
   color: theme.$primary;
+
+  @media (max-width: 880px) {
+    display: none;
+  }
+}
+
+.header__account__mobile {
+  display: none;
+  font-weight: bold;
+  color: theme.$primary;
+
+  @media (max-width: 880px) {
+    display: block;
+  }
 }
 
 .menu {

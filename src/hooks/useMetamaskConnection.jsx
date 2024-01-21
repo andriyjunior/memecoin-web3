@@ -1,10 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { useModalContext } from "../contexts/ModalContext";
-import { InjectedConnector } from "@web3-react/injected-connector";
 import { useWeb3React } from "@web3-react/core";
-
-import { initializeConnector, Web3ReactHooks } from "@web3-react/core";
-import { Connector, Web3ReactStore } from "@web3-react/types";
 
 const key = "address_metamask";
 
@@ -12,17 +8,13 @@ const saveToLocalStorage = (address) => {
   localStorage.setItem(key, address);
 };
 
-const removeToLocalStorage = () => {
+const removeFromLocalStorage = () => {
   localStorage.removeItem(key);
 };
 
 const getAddressFromLocalStorage = () => {
   return localStorage.getItem(key);
 };
-
-const Injected = new InjectedConnector({
-  supportedChainIds: [1, 3, 4, 5, 42],
-});
 
 export const useMetamaskConnection = () => {
   const { setModals } = useModalContext();
@@ -51,6 +43,17 @@ export const useMetamaskConnection = () => {
     }
   }, [connector, setModals]);
 
+  const disconnect = () => {
+    if (isActive) {
+      if (connector?.deactivate) {
+        void connector.deactivate();
+      } else {
+        void connector.resetState();
+      }
+      removeFromLocalStorage();
+    }
+  };
+
   useEffect(() => {
     const savedAccount = getAddressFromLocalStorage();
 
@@ -62,5 +65,5 @@ export const useMetamaskConnection = () => {
     setModals({ connectWalletPopup: true });
   }, [account, connect, isActive, setModals]);
 
-  return { connect, account, isLoading };
+  return { connect, disconnect, account, isLoading };
 };
