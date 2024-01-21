@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.af6ef452.css",
+    "main.js": "/static/js/main.073fe768.js",
+    "static/js/787.9cd1cd8b.chunk.js": "/static/js/787.9cd1cd8b.chunk.js",
+    "static/media/Scandia.woff2": "/static/media/Scandia.14a75bdc5d5bbabbe7f6.woff2",
+    "index.html": "/index.html",
+    "main.af6ef452.css.map": "/static/css/main.af6ef452.css.map",
+    "main.073fe768.js.map": "/static/js/main.073fe768.js.map",
+    "787.9cd1cd8b.chunk.js.map": "/static/js/787.9cd1cd8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af6ef452.css",
+    "static/js/main.073fe768.js"
+  ]
+}
