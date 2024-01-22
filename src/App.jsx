@@ -11,7 +11,7 @@ const metamask = initializeConnector((actions) => new MetaMask({ actions }));
 const connectors = [metamask];
 
 function App() {
-  const { modals } = useModalContext();
+  // const { modals } = useModalContext();
 
   return (
     <Web3ReactProvider connectors={connectors}>
@@ -19,7 +19,7 @@ function App() {
         <Layout>
           <Home />
         </Layout>
-        {modals.connectWalletPopup && <ConnectWalletPopup />}
+        {/* {modals.connectWalletPopup && <ConnectWalletPopup />} */}
       </AnimatePresence>
     </Web3ReactProvider>
   );
