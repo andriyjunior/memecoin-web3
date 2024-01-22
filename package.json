@@ -1,8 +1,8 @@
 {
-  "name": "memecoin-web3",
+  "name": "memecoin-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andriyjunior.github.io/memecoin-web3",
+  "homepage": "https://Crypto-Explorers.github.io/memecoin-frontend",
   "dependencies": {
     "@ethersproject/providers": "^5.7.2",
     "@metamask/sdk-react": "^0.14.2",
