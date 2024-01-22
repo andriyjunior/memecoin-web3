@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/memecoin-web3/static/css/main.51000f62.css",
-    "main.js": "/memecoin-web3/static/js/main.94132ee7.js",
-    "static/js/787.9cd1cd8b.chunk.js": "/memecoin-web3/static/js/787.9cd1cd8b.chunk.js",
+    "main.js": "/memecoin-web3/static/js/main.9812d748.js",
+    "static/js/787.e058d830.chunk.js": "/memecoin-web3/static/js/787.e058d830.chunk.js",
     "static/media/Scandia.woff2": "/memecoin-web3/static/media/Scandia.14a75bdc5d5bbabbe7f6.woff2",
     "index.html": "/memecoin-web3/index.html",
     "main.51000f62.css.map": "/memecoin-web3/static/css/main.51000f62.css.map",
-    "main.94132ee7.js.map": "/memecoin-web3/static/js/main.94132ee7.js.map",
-    "787.9cd1cd8b.chunk.js.map": "/memecoin-web3/static/js/787.9cd1cd8b.chunk.js.map"
+    "main.9812d748.js.map": "/memecoin-web3/static/js/main.9812d748.js.map",
+    "787.e058d830.chunk.js.map": "/memecoin-web3/static/js/787.e058d830.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51000f62.css",
-    "static/js/main.94132ee7.js"
+    "static/js/main.9812d748.js"
   ]
 }
